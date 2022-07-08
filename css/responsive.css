@@ -95,6 +95,12 @@
         margin-top: 45px;
     }
 }
+@media (max-width: 1300px) {
+.slider_section .detail-box h1 {
+        font-size: 3.5rem;
+        margin-left: 40px;
+    }
+}
 
 @media (max-width: 576px) {
     .contact_section input {

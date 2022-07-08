@@ -301,7 +301,7 @@ a:focus {
           align-items: center;
   position: unset;
 }
-
+figcaption{padding-left: 6px;padding-right: 6px;}
 .slider_section .row .col-md-7,
 .slider_section .row .col-md-5 {
   position: unset;
@@ -322,7 +322,7 @@ a:focus {
   font-weight: bold;
   color: #8547ca;
   font-size: 3.7rem;
-  margin-left: 46px;
+  
 }
 
 .slider_section .detail-box a {
