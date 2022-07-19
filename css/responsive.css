@@ -115,13 +115,6 @@
 @media (max-width: 480px) {
     
     
-        .q-item__section--main~.q-item__section--side {           
-            padding-left: 0px;            
-    
-        }
-        .q-item {
-            padding-right: 0px;
-        }
 }
 @media (max-width: 680px) {
 
