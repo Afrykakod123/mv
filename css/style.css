@@ -473,10 +473,10 @@ figcaption{padding-left: 6px;padding-right: 6px;}
 }
 
 .download_section .box {
-  background-color: #333456;
+ 
   padding: 15px;
   margin: 45px 0;
-  color: #fefdfc;
+  color: #333456;
 }
 
 .download_section .box .head-box {
