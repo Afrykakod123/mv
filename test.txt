@@ -1,2 +1,2 @@
 testM
-testZajoncM
+testZajonc2Z
