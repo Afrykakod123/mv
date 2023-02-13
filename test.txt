@@ -1,2 +1,2 @@
-testMlUTYzajonced
-testZajonc2Z
+test
+testZajonc
