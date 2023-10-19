@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+test
+testZajonc
+kuzwa
+=======
+testMlUTYzajonced
+testZajonc2Z
+>>>>>>> Revert "revert2"
