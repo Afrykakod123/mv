@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+MastertestMlUTYzajonced
+MASTER
+=======
+test
+testZajonc
+kuzwa
+>>>>>>> zajonc reabse
