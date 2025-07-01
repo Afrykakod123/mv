@@ -1,531 +1,182 @@
-<html>
-
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords"
-    content="Flashcards, test quizzes, memorize, learning  languages, words, terms and definitions" />
-  <meta name="description"
-    content="Flashcards free app, teaches through notifications, quizzes, flashcards,  pronunciation checking" />
-  <meta name="author" content="" />
-  <link rel="icon" type="image/png" sizes="128x128" href="icons/favicon-128x128.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
-  <link rel="icon" type="image/ico" href="favicon.ico" />
-  <link rel="canonical" href="https://memorizeavocabulary.netlify.app" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Flashcards, test quizzes, memorize, learning languages, vocabulary, app">
+  <meta name="description" content="Flashcards free app with Autolearn – it teaches you while you do your thing: sports, music, browsing, shopping, or working.">
+  <link rel="canonical" href="https://memorizeavocabulary.netlify.app">
+  <title>App Flashcards, Hands-free learning — The app learns in the background</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" type="text/css">
-  <link href="https://cdn.jsdelivr.net/npm/quasar@2.5.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
-  <link href="https://cdn.jsdelivr.net/npm/animate.css@^4.0.0/animate.min.css" rel="stylesheet" type="text/css">
-  <title>App Flashcards, quizzes, notifications automate the learning process </title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/favicon-32x32.png">
 
-  <!-- slider stylesheet -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ME9CG8SW9"></script>
-  <link rel="styleasheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- fonts style -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&#38;display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- FontAwesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TTY79HLPE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
     }
-    gtag("js", new Date());
-    gtag("config", "G-2TTY79HLPE");
-  </script>
+
+    .carousel-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .slider_section {
+      padding: 50px 0;
+    }
+
+    .detail-box h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .navbar-brand span {
+      font-weight: bold;
+    }
+
+    .info_section {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .info_section a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+    }
+
+    /* Custom Carousel Control Buttons */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 123, 255, 0.8); /* Bootstrap Blue */
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .footer-icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .footer-icons a:hover {
+      color: #0d6efd; /* Bootstrap primary blue on hover */
+    }
+  </style>
 </head>
 
 <body>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <span> Memorize Vocabulary </span>
-          </a>
 
-          <div class="navbar-collapse" id="">
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="index.html">HOME</a>
-                <a href="about.html">ABOUT</a>
-                <!-- <a href="feature.html">FEATURE</a>
-                <a href="contact.html">CONTACT US</a> -->
-                <a href="privacy-policy.html">PRIVACY POLICE</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section position-relative">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <div class="detail-box">
-              <h1>
-                App to help you memorize through flashcards notifications and quizzes
-              </h1>
-              <div>
-                <!-- <a href="">
-                  Read More
-                </a> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-              </ol>
-              <div class="carousel-inner">
-                 <div class="carousel-item active">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/app.jpg" alt="app flash cards" />
-                      <figcaption class="fc">
-                        Google Translate
-                      </figcaption>
-                      <figcaption>
-                       Flashcards  Notify  Quizzes
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="carousel-item ">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/flashcards.jpg" alt="app memorize vocabulary" />
-                      <figcaption class="fc">
-                        Create or import flashcards
-                      </figcaption>
-                      <figcaption>
-                        Category of vocabulary, definitions
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/import.jpg" alt="app import vocabulary" />
-                      <figcaption>
-                        Flashcards
-                      </figcaption>
-                      <figcaption class="fc">
-                        Reverse, shuffle, show only to learn or all
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/quiz.jpg" alt="app qiuz vocabulary" />
-                      <figcaption>Vocabulary Tests</figcaption>
-                      <figcaption class="fc">Flashcards quiz</figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/import2.jpg" alt="import vocabulary from quizlet" />
-                      <figcaption>
-                        Import sets from Quizlet, Memrise
-                      </figcaption>
-                      <figcaption class="fc">
-                        Paste link to import Quizlet set
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/notifi.jpg" alt="app vocabulary notifier" />
-                      <figcaption>
-                        Automate your learning process through notifications
-                      </figcaption>
-                      <figcaption class="fc">
-                        Run notifications, random order from created
-                        flashcards
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/Smart2.jpg" alt="app vocabulary notifier smartwatch" />
-                      <figcaption class="fc">Don't wake up phone</figcaption>
-                    </figure>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/lock.jpg" alt="app vocabulary notifier locked screen" />
-                      <figcaption>Notifications on locked screen</figcaption>
-                      <figcaption class="fc">
-                        Reminders without touching the phone
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="img-box">
-                    <figure>
-                      <img src="images/float.jpg" alt="app vocabulary Float notifications" />
-                      <figcaption class="fc">
-                        Pop-up notifications
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end slider section -->
-  </div>
-
-  <!-- feature section -->
-  <section class="feature_section layout_padding2 layout_margin">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <div class="heading_container">
-        <h2>
-          Amazing Features To Use <br />
-          Our Application
-        </h2>
+      <a class="navbar-brand" href="#">Memorize Vocabulary App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
+
+  <!-- Slider Section -->
+  <section class="slider_section">
     <div class="container">
-      <br /><br />
-      <div class="row container" style="margin-right: 0px!important; margin-left: 0px!important;">
-        <div id="q-app">
+      <div class="row align-items-center">
+        <!-- Left Column: Text -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="detail-box">
+            <h1>NotifyWord – An Android app that fires flashcards – straight to your ears 🎧, your eyes 👁️, your brain 🧠, and directly into your memory 💾.</h1>
+          </div>
+        </div>
 
-          <q-list bordered>
-            <q-expansion-item group="somegroup">
-              <template v-slot:header>
-                <q-item-section>
-                  <q-item-label class="text-teal">You can learn  vocabulary, term, definitions</q-item-label>
-                  <q-item-label caption lines="2">Audio pronunciation for common languages via Google
-                    Translate</q-item-label>
-                </q-item-section>
-                <q-item-section side top class="text-teal">
-                  <q-item-label caption>Multi languages</q-item-label>
-                  <q-icon class="q-pt-xs" name="language" />
-                </q-item-section>
-              </template>
-              <q-card>
-                <q-card-section>
-                  <h2 class="text-h5 text-blue-grey-8 ">
-                    Automate your learning process  through flashcards quizzes and notifications
-                  </h2>
-                  🚀 1 CLICK in APP and can learn while using other apps using background notifications<br />
-                  on the smartwatch and on the blocked screen
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-
-            <hr class="q-separator q-separator--horizontal" />
-
-            <q-expansion-item group="somegroup">
-              <template v-slot:header>
-                <q-item-section>
-                  <q-item-label class="text-teal">Google Translate provides multiple possible translations along
-                    with rating of how common they are</q-item-label>
-                </q-item-section>
-                <q-item-section side top class="text-teal">
-                  <q-item-label caption>Google Translate</q-item-label>
-                  <q-icon class="q-pt-xs" name="g_translate" color="gray" />
-                </q-item-section>
-              </template>
-              <q-card>
-                <q-card-section>
-                  <h2 class="text-h5 text-blue-grey-8 ">
-                     Works with Google translator, you can check the pronunciation
-                  </h2>
-                  <img src="images/thumbs/gt.jpg" alt="" title=" flashcards Google translator button"/><br /><br />
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-            <hr class="q-separator q-separator--horizontal" />
-            <q-expansion-item group="somegroup">
-              <template v-slot:header>
-                <q-item-section>
-                  <q-item-label class="text-teal">Category words</q-item-label>
-                </q-item-section>
-                <q-item-section side top class="text-teal">
-                  <q-item-label caption>Category words</q-item-label>
-                  <q-icon class="q-pt-xs" name="category" color="gray" />
-                </q-item-section>
-              </template>
-              <q-card>
-                <q-card-section>
-                  <h2 class="text-h5 text-blue-grey-8 ">
-                    You can rename, export, import to few category
-                  </h2>
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-
-            <hr class="q-separator q-separator--horizontal" />
-            <q-expansion-item group="somegroup">
-              <template v-slot:header>
-                <q-item-section>
-                  <q-item-label class="text-teal">Pop-up notifier with smartwatch mode (smartwatch mode only on android)
-                  </q-item-label>
-                </q-item-section>
-                <q-item-section side top class="text-teal">
-                  <q-item-label caption>Vocabulary notifier</q-item-label>
-                  <q-icon class="q-pt-xs" name="notifications_active" color="gray" />
-                </q-item-section>
-              </template>
-              <q-card>
-                <q-card-section>
-                  <h2 class="text-h5 text-blue-grey-8 "><br />
-                    You can set the number of notifications and frequency <br />
-                    Use with blocked screen, without touching the phone<br />
-                    Use with smartwatch<br />                   
-                    Extremely handy pop-up notifications on your phone screen while activity on other apps<br /><br >
-                    
-                  </h2>
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-
-            <hr class="q-separator q-separator--horizontal" />
-            <q-expansion-item group="somegroup">
-              <template v-slot:header>
-                <q-item-section>
-                  <q-item-label class="text-teal">Import/export</q-item-label>
-                </q-item-section>
-                <q-item-section side top class="text-teal">
-                  <q-item-label caption>Excel import/export </q-item-label>
-                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="27" height="27" viewBox="0 0 24 24"
-                    style="fill: rgb(132, 71, 202)">
-                    <path
-                      d="M 12 3 L 2 5 L 2 19 L 12 21 L 12 3 z M 14 5 L 14 7 L 16 7 L 16 9 L 14 9 L 14 11 L 16 11 L 16 13 L 14 13 L 14 15 L 16 15 L 16 17 L 14 17 L 14 19 L 21 19 C 21.552 19 22 18.552 22 18 L 22 6 C 22 5.448 21.552 5 21 5 L 14 5 z M 18 7 L 20 7 L 20 9 L 18 9 L 18 7 z M 4.1757812 8.296875 L 5.953125 8.296875 L 6.8769531 10.511719 C 6.9519531 10.692719 7.0084063 10.902625 7.0664062 11.140625 L 7.0917969 11.140625 C 7.1247969 10.997625 7.1919688 10.779141 7.2929688 10.494141 L 8.3222656 8.296875 L 9.9433594 8.296875 L 8.0078125 11.966797 L 10 15.703125 L 8.2714844 15.703125 L 7.1582031 13.289062 C 7.1162031 13.204062 7.0663906 13.032922 7.0253906 12.794922 L 7.0097656 12.794922 C 6.9847656 12.908922 6.934375 13.079594 6.859375 13.308594 L 5.7363281 15.703125 L 4 15.703125 L 6.0605469 11.996094 L 4.1757812 8.296875 z M 18 11 L 20 11 L 20 13 L 18 13 L 18 11 z M 18 15 L 20 15 L 20 17 L 18 17 L 18 15 z">
-                    </path>
-                  </svg>
-                </q-item-section>
-              </template>
-              <q-card>
-                <q-card-section>
-                  <h2 class="text-h5 text-blue-grey-8 "><br />
-                    Import vocabulary, definitions to the app from Excel, text, Google Translate, Quizlet, Memrise</h2><br><br>
-
-                     <a href="import.html">Import as text from Quizlet</a> <br /><br />
-                    <img src="images/thumbs/mi.jpg" alt="" title="import text flashcards"/><br /><br />
-                    - Import from text, paste text with tab separator between term and definition<br /><br />
-
-                    text — definition <br />
-                    text — definition <br />
-                    text — definition  <br /><br >
-                    - with dash separator between term and definition<br /><br />
-
-                    text &nbsp;&nbsp;&nbsp;&nbsp; definition <br />
-                    text &nbsp;&nbsp;&nbsp;&nbsp; definition <br />
-                    text &nbsp;&nbsp;&nbsp;&nbsp; definition  <br /><br >
-
-                   <h2 class="text-h5 text-blue-grey-8 "> Import  Quizlet | Memrise url public set  </h2>  paste url in tab Import Qizlet | Memrise <br >
-
-                     Example URL:  https://quizlet.com/193773852/.... <br /><br >
-                      <img src="images/thumbs/url.jpg" alt="" title="import from Quizlet url"/><br /><br />
-
-                     <h2 class="text-h5 text-blue-grey-8 "> Import  saved translations from Google Tranlations </h2>  <br >
-                    
-                        On your computer, sign in to Google Translate. <br >
-                        Below the text boxes, click Saved.<br >
-                        At the top right, click Export to Google Sheets. <br >
-                        Import saved xlsx to App <br /><br >
-
-
-
-                     <h2 class="text-h5 text-blue-grey-8 ">Import / exprt Execel file .xlsx </h2>2 or 4 columns, export to Excel file <br /> <br />
-                     <img src="images/thumbs/excel.jpg" alt="" title="import excel flashcards"/><br /><br />
-
-                    How to copy from web to excel
-
-                    <div class="row q-pa-md justify-center">
-                      <iframe src="https://www.youtube.com/embed/1zG0cG1MdYc?&cc_load_policy=1"
-                        title="Excel split text into different columns based on dashes, em dashes" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+        <!-- Right Column: Carousel -->
+        <div class="col-lg-6">
+          <div id="appCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#appCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#appCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#appCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#appCarousel" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/app.jpg" class="d-block w-100" alt="App flashcards">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Google Translate Integration</h5>
+                  <p>Flashcards, Notify, Quizzes</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/flashcards.jpg" class="d-block w-100" alt="Memorize vocabulary">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Create or Import Flashcards</h5>
+                  <p>Categories, definitions, shuffle modes</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/quiz.jpg" class="d-block w-100" alt="Vocabulary quiz">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Vocabulary Tests</h5>
+                  <p>Flashcard quizzes to test your knowledge</p>
+                </div>
                     </div>
-                 
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-
-            <hr class="q-separator q-separator--horizontal" />
-            <q-expansion-item group="somegroup">
-              <template v-slot:header>
-                <q-item-section>
-                  <q-item-label class="text-teal">Random quizzes</q-item-label>
-                </q-item-section>
-                <q-item-section side top class="text-teal">
-                  <q-item-label caption>Quizzes</q-item-label>
-                  <q-icon class="q-pt-xs" name="quiz" color="gray" />
-                </q-item-section>
-              </template>
-              <q-card>
-                <q-card-section>
-                  <h2 class="text-h5 text-blue-grey-8 "><br />
-                    - Questions based on a selected category<br>
-                    - Select the number of questions<br>
-                    - Reverse term and definition<br>
-                    - Open in Google Translate <br><br />
-                  </h2>
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-             <hr class="q-separator q-separator--horizontal" />
-            <q-expansion-item group="somegroup">
-              <template v-slot:header>
-                <q-item-section>
-                  <q-item-label class="text-teal">Flashcards</q-item-label>
-                </q-item-section>
-                <q-item-section side top class="text-teal">
-                  <q-item-label caption>Flashcards</q-item-label>
-                  <q-icon class="q-pt-xs" name="view_carousel" color="gray" />
-                </q-item-section>
-              </template>
-              <q-card>
-                <q-card-section>
-                  <h2 class="text-h5 text-blue-grey-8 "><br />
-                    - Option to play front or back <br>
-                    - Select as learned<br>
-                    - Show only to learn or all<br>
-                    - Flash card shuffle<br>
-                    - Linear progress bar <br>
-                    - Open in Google Translate <br><br />
-                  </h2>
-                  </q-card-sections>
-              </q-card>
-            </q-expansion-item>
-
-            <hr class="q-separator q-separator--horizontal" />
-          </q-list>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end feature section -->
-
-  <!-- download section -->
-
-  <section class="download_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container">
-        <h2>Download</h2>
-      </div>
-      <div class="layout_padding2-top">
-        <div class="row">
-          <div class="col-md-4">
-
-            <a href="https://play.google.com/store/apps/details?id=nw.cordova.quasar.app">
-
-              <div class="detail-box">
-                <img src="images/google-play-badge-logo-png-transparent-810x240.png" alt=""
-                  style="max-width: 100%; max-height: 108px;" />
-              </div>
-            </a>
-
-          </div>
-          <div class="col-md-4">
-            <div class="box" style="margin:0">
-              <div class="head-box">
-                <div class="img-box">
-                  <img src="images/heart.png" alt="">
+                 <div class="carousel-item">
+                   <img src="images/notifi.jpg" class="d-block w-100" alt="Hands-free learning" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Hands-free learning — The app learns in the background.</h5>
+                    <p>Autolearn – it teaches you while you do your thing: sports, music, browsing, shopping, or working.</p>
                 </div>
-                <h6>Enjoy Our App</h6>
+                
               </div>
-
             </div>
-          </div>
 
-          <div class="col-md-4">
-
-            <a href="https://apps.apple.com/app/memorize-vocabulary/id6444487905?platform=iphone">
-
-              <img src="images/app-store-png-logo-33116.png" alt="" style="max-width: 100%; max-height: 108px;" />
-
-            </a>
-
+            <!-- Custom Colored Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#appCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#appCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- end download section -->
+  <!-- Download Section -->
+  <section class="text-center py-5 bg-light">
+    <h2>Download Now</h2>
+    <a href="https://play.google.com/store/apps/details?id=nw.cordova.quasar.app"  target="_blank">
+      <img src="images/google-play-badge-logo-png-transparent-810x240.png" alt="Download on Google Play" style="max-width: 200px;">
+    </a>
+  </section>
 
-  <!-- about section -->
-
-  <!-- end client section -->
-
-  <!-- info section -->
-  <section class="info_section layout_padding-top">
-    <div class="info_logo-box">
-      <h2 style="text-align: center">Memorize Vocabulary</h2>
-    </div>
-    <div class="container layout_padding2">
-      <div class="row" style="justify-content: center">
-        <p style="text-align: center">
-          <a
+  <!-- Footer Info Section -->
+  <section class="info_section text-center">
+    <div class="container">
+      <div class="footer-icons">
+       <a
             href="mailto:&#97;&#112;&#112;&#109;&#101;&#109;&#111;&#114;&#105;&#122;&#101;&#118;&#111;&#99;&#97;&#98;&#117;&#108;&#97;&#114;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">
             <span class="material-icons" style="
                   color: white;
@@ -542,43 +193,14 @@
             target="_blank">
             <img src="images/fb.png" alt="" style="width: 35px" />
           </a>
-        </p>
       </div>
+      <p class="mt-3">&copy; 2025 Memorize Vocabulary App</p>
     </div>
   </section>
 
-  <!-- end info section -->
-  <!-- footer section -->
+  <!-- Bootstrap 5 JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- footer section -->
-
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-
-  <script>
-    function openNav() {
-      document.getElementById("myNav").classList.toggle("menu_width");
-      document
-        .querySelector(".custom_menu-btn")
-        .classList.toggle("menu_btn-style");
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/quasar@2.5.5/dist/quasar.umd.prod.js"></script>
-
-  <script>
-    /*
-        Example kicking off the UI. Obviously, adapt this to your specific needs.
-        Assumes you have a <div id="q-app"></div> in your <body> above
-       */
-    const app = Vue.createApp({
-      setup() {
-        return {}
-      }
-    })
-    app.use(Quasar)
-    app.mount('#q-app')
-  </script>
 </body>
 
 </html>
